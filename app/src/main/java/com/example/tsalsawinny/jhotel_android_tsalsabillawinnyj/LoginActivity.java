@@ -38,8 +38,14 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         try{ JSONObject jsonResponse = new JSONObject(response);
                             if(jsonResponse!=null) {
+                                int id = jsonResponse.getInt("id");
+                                Intent Intent2 = new Intent(LoginActivity.this, MainActivity.class);
+                                Intent2.putExtra("id_customer", id);
+                                LoginActivity.this.startActivity(Intent2);
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                                builder.setMessage("Login Success") .create() .show();
+                                builder.setMessage("Login Success")
+                                        .create()
+                                        .show();
                             }
                         } catch (JSONException e) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);

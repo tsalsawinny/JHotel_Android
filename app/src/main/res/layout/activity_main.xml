@@ -11,4 +11,15 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>
 
+    <Button
+        android:id="@+id/pesanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/orange"
+        android:text="@string/pesanan"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="447dp" />
+
 </android.support.constraint.ConstraintLayout>

@@ -63,4 +63,7 @@ public class Hotel {
         this.bintang = bintang;
     }
 
+    public int getId() {
+        return id;
+    }
 }

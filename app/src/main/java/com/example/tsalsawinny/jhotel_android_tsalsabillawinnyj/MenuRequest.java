@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class MenuRequest extends StringRequest{
 
-    private static final String Vacant_URL = "http://10.5.79.239/vacantrooms";
+    private static final String Vacant_URL = "http://192.168.100.7/vacantrooms";
 
     public MenuRequest(Response.Listener<String> listener) {
         super(Method.GET, Vacant_URL, listener, null);
