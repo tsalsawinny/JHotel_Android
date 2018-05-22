@@ -1,11 +1,9 @@
 package com.example.tsalsawinny.jhotel_android_tsalsabillawinnyj;
 
 import android.content.Intent;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
@@ -33,25 +31,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final Button pesanan = (Button) findViewById(R.id.pesanan);
 
-        Intent i = getIntent();
-        Bundle b = i.getExtras();
+        //final Button pesanan = findViewById(R.id.pesanan);
+
+        Intent idCustIntent = getIntent();
+        Bundle b = idCustIntent.getExtras();
         if(b!=null){
             currentUserId = b.getInt("id_customer");
         }
 
-        expListView = (ExpandableListView) findViewById(R.id.expListView);
+        expListView = findViewById(R.id.lvExp);
 
         refreshList();
-        pesanan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent pesananInt = new Intent(MainActivity.this, SelesaiPesananActivity.class);
-                pesananInt.putExtra("id_customer", currentUserId);
-                MainActivity.this.startActivity(pesananInt);
-            }
-        });
     }
 
     public void refreshList() {
@@ -65,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
                     Hotel h = new Hotel(e.getInt("id"),e.getString("nama"),
                             new Lokasi(lokasi.getDouble("x"), lokasi.getDouble("y"), lokasi.getString("deskripsi")),
                             e.getInt("bintang"));
+
                     listHotel.add(h);
+
                     for (int i = 0; i < jsonResponse.length(); i++) {
                         JSONObject room = jsonResponse.getJSONObject(i);
                         Room room1 = new Room(room.getString("nomorKamar"), room.getString("statusKamar"),
@@ -82,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                             Room selected = childMapping.get(listHotel.get(groupPosition)).get(childPosition);
                             Intent intent = new Intent(MainActivity.this, BuatPesananActivity.class);
                             intent.putExtra("id_customer", currentUserId);
-                            intent.putExtra("nomorKamar", selected.getRoomNumber());
+                            intent.putExtra("nomor_kamar", selected.getRoomNumber());
                             intent.putExtra("dailyTariff", selected.getDailyTariff());
                             intent.putExtra("id_hotel", listHotel.get(groupPosition).getId());
                             startActivity(intent);

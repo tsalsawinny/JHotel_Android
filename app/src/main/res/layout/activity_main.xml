@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bghotel"
     tools:context=".MainActivity">
 
-    <ExpandableListView
-        android:id="@+id/expListView"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
-
-    <Button
-        android:id="@+id/pesanan"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/orange"
-        android:text="@string/pesanan"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="447dp" />
-
-</android.support.constraint.ConstraintLayout>
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:ignore="UselessParent">
+        <ExpandableListView
+            android:id="@+id/lvExp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="#000"
+            android:listSelector="@color/orange"/>
+</LinearLayout>
+    </LinearLayout>

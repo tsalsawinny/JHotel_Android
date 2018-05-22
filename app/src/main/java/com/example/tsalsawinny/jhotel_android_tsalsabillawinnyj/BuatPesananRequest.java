@@ -5,8 +5,15 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * java untuk membuat request pesanan
+ *
+ * @author Tsalsabilla Winny Junika
+ * @version 08-05-2018
+ */
+
 public class BuatPesananRequest extends StringRequest {
-    private static final String BuatPesanan_URL = "http://192.168.100.7:8080/bookpesanan";
+    private static final String BuatPesanan_URL = "http://192.168.100.5:8080/bookpesanan";
     private Map<String, String> params;
 
     public BuatPesananRequest(String jumlah_hari, String id_customer, String id_hotel, String nomor_kamar,

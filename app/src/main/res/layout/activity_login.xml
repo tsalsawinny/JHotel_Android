@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mainhotel"
     tools:context=".LoginActivity">
 
     <EditText
         android:id="@+id/inputPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
         android:ems="10"
-        android:hint="Pasword"
+        android:hint="Sandi"
+        android:textStyle="bold"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,32 +27,36 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Email"
+        android:textStyle="bold"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/inputPass"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.262" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:background="#f9A602"
         android:text="Login"
-        app:layout_constraintBottom_toTopOf="@+id/registerClickable"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPass" />
+        app:layout_constraintTop_toTopOf="@+id/inputPass" />
 
     <TextView
         android:id="@+id/registerClickable"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register here"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="189dp"
+        android:layout_marginTop="56dp"
+        android:text="Belum punya akun? Daftar sini yuk!"
+        android:textColor="#7C0A02"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
 

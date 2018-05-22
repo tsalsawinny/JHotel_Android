@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">JHotel_Android_TsalsabillaWinnyJ</string>\
+    <string name="app_name">JHotel_Android_Winny</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="halaman_pesan">Halaman Pesan</string>
+    <string name="info2">Saxophone</string>
+    <string name="acara">Acara</string>
+    <string name="tempat">Tempat</string>
+    <string name="todo">TODO</string>
+    <string name="lihat_pesanan">PESANAN KAMU</string>
+    <string name="logout">Logout</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
     <string name="login">LOGIN</string>
@@ -11,8 +20,25 @@
     <string name="tariff">Tariff :</string>
     <string name="durasi">Durasi :</string>
     <string name="room_number">Room Number :</string>
-    <string name="hitung">Hitung</string>
-    <string name="pesan">Pesan</string>
+    <string name="hitung">Total</string>
+    <string name="pesan">Pesan disini yuk!</string>
     <string name="pesanan">Pesanan</string>
+    <string name="id_pesanan">ID Pesanan:</string>
+    <string name="biaya">Biaya:</string>
+    <string name="jumlah_hari">Jumlah Hari:</string>
+    <string name="tanggal">Tanggal:</string>
+    <string name="batal">Batal</string>
+    <string name="selesai">Selesai</string>
+    <string name="kembali">Kembali</string>
+    <string name="jhotel">JHOTEL</string>
+    <string name="nama_hotel">Nama Hotel :</string>
+    <string name="lokasi">Lokasi :</string>
+    <string name="bintang">Bintang :</string>
+    <string name="nomor_kamar">Nomor Kamar :</string>
+    <string name="status_kamar">Status Kamar :</string>
+    <string name="tarif_kamar">Tarif Kamar :</string>
+    <string name="tipe_kamar">Tipe Kamar :</string>
+    <string name="pesan_kamar">Pesan disini ya!</string>
+    <string name="informasi_hotel">Informasi Hotel</string>
 </resources>
 

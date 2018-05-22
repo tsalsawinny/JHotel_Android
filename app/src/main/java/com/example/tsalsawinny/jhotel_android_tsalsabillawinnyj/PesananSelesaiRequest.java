@@ -5,15 +5,24 @@ import com.android.volley.toolbox.StringRequest;
 
 import java.util.HashMap;
 import java.util.Map;
-public class PesananSelesaiRequest extends StringRequest {
 
-    private static final String Selesai_URL = "http://192.168.100.7:8080/finishpesanan";
+/**
+ * java untuk menyelesaikan pesanan
+ *
+ * @author Tsalsabilla Winny Junika
+ * @version 08-05-2018
+ */
+
+
+public class PesananSelesaiRequest extends StringRequest {
+    //private static String userId;
+    private static final String PesananSelesai_URL = "http://192.168.100.5:8080/finishpesanan";
     private Map<String, String> params;
 
-    public PesananSelesaiRequest(int id_pesanan, Response.Listener<String> listener) {
-        super(Method.POST, Selesai_URL, listener, null);
+    public PesananSelesaiRequest(String id_pesanan, Response.Listener<String> listener) {
+        super(Method.POST, PesananSelesai_URL, listener, null);
         params = new HashMap<>();
-        params.put("id pesanan", String.valueOf(id_pesanan));
+        params.put("id_pesanan",id_pesanan);
     }
 
     @Override
@@ -21,4 +30,3 @@ public class PesananSelesaiRequest extends StringRequest {
         return params;
     }
 }
-

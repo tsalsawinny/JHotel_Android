@@ -1,114 +1,171 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/hotel3"
     tools:context=".BuatPesananActivity">
 
-    <TextView
-        android:id="@+id/staticRoomNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="82dp"
-        android:text="Room Number:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/room_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/staticRoomNumber"
-        app:layout_constraintTop_toTopOf="@+id/staticRoomNumber" />
-
-    <TextView
-        android:id="@+id/total_biaya"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/hitung"
-        app:layout_constraintStart_toStartOf="@+id/durasi_hari" />
-
-    <TextView
-        android:id="@+id/staticTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total"
-        app:layout_constraintBottom_toBottomOf="@+id/total_biaya"
-        app:layout_constraintStart_toStartOf="@+id/staticDurasi"
-        app:layout_constraintTop_toTopOf="@+id/total_biaya" />
-
-    <TextView
-        android:id="@+id/staticDurasi"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_marginBottom="60dp"
-        android:layout_marginTop="61dp"
-        android:text="Durasi"
-        app:layout_constraintBottom_toBottomOf="@+id/staticTotal"
-        app:layout_constraintStart_toStartOf="@+id/staticTariff"
-        app:layout_constraintTop_toBottomOf="@+id/staticRoomNumber" />
-
-    <TextView
-        android:id="@+id/staticTariff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="Tariff"
-        app:layout_constraintStart_toStartOf="@+id/staticRoomNumber"
-        app:layout_constraintTop_toBottomOf="@+id/staticRoomNumber" />
-
-    <EditText
-        android:id="@+id/durasi_hari"
-        android:layout_width="0dp"
-        android:layout_height="15dp"
-        android:layout_marginBottom="43dp"
-        android:layout_marginTop="43dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/total_biaya"
-        app:layout_constraintEnd_toEndOf="@+id/tariff"
-        app:layout_constraintStart_toStartOf="@+id/tariff"
-        app:layout_constraintTop_toTopOf="@+id/tariff" />
-
-    <TextView
-        android:id="@+id/tariff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/room_number"
-        app:layout_constraintTop_toBottomOf="@+id/room_number" />
-
-    <Button
-        android:id="@+id/hitung"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Hitung"
-        app:layout_constraintBottom_toTopOf="@+id/pesan"
-        app:layout_constraintStart_toStartOf="@+id/pesan" />
-
-    <Button
-        android:id="@+id/pesan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
-        android:text="Pesan"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        tools:ignore="UselessParent">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|center_horizontal">
+
+            <TextView
+                android:id="@+id/registerClickable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pesan_kamar"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/staticRoomNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="52dp"
+                android:layout_toEndOf="@+id/staticDurasi"
+                android:gravity="left"
+                android:text="@string/room_number"
+                android:textAlignment="center"
+                android:textColor="@color/abu_abu_tua"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/room_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/staticRoomNumber"
+                android:layout_marginEnd="62dp"
+                android:text="@string/textview"
+                android:textColor="@color/abu_abu_tua"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/staticTariff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/staticRoomNumber"
+                android:layout_marginTop="99dp"
+                android:text="@string/tariff"
+                android:textColor="@color/abu_abu_tua"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tariff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/room_number"
+                android:layout_alignTop="@+id/staticTariff"
+                android:text="@string/textview"
+                android:textColor="@color/abu_abu_tua"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/staticDurasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/staticDurasi"
+                android:layout_below="@id/staticTariff"
+                android:layout_marginTop="20dp"
+                android:text="@string/durasi"
+                android:textColor="@color/abu_abu_tua"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/durasi_hari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/staticDurasi"
+                android:layout_alignStart="@+id/room_number"
+                android:inputType="number"
+                android:textColor="@color/abu_abu_tua"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/staticTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/staticRoomNumber"
+                android:layout_alignTop="@+id/total_biaya"
+                android:text="@string/total"
+                android:textColor="@color/abu_abu_tua"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/total_biaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/room_number"
+                android:layout_below="@+id/staticDurasi"
+                android:text="@string/textview"
+                android:textColor="@color/abu_abu_tua"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/hitung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary"
+                android:text="@string/hitung"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/pesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorPrimary"
+                android:text="@string/pesan"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/kembali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/staticTotal"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"
+                android:text="@string/kembali"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
